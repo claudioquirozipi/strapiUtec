@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "variants",
+  "info": {
+    "name": "variant"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "variant": {
+      "required": true,
+      "unique": true,
+      "type": "integer"
+    },
+    "activitis": {
+      "via": "variant",
+      "collection": "activiti"
+    }
+  }
+}

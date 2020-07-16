@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activitis",
+  "info": {
+    "name": "activiti"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "type": {
+      "model": "type",
+      "via": "activitis"
+    },
+    "variant": {
+      "model": "variant",
+      "via": "activitis"
+    },
+    "eventdate": {
+      "type": "datetime"
+    },
+    "organizer": {
+      "type": "string"
+    },
+    "place": {
+      "type": "string"
+    },
+    "Contact": {
+      "type": "string"
+    },
+    "activitydate": {
+      "type": "date",
+      "required": true
+    },
+    "cards": {
+      "type": "json"
+    },
+    "cardimage": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "time": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
